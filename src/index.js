@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'mobx-react'
+import ProfileStore from './stores/ProfileStore';
+import Profile from './stores/Profile';
+import gigStore from './stores/gigStore'
+import DarkTheme from './stores/darktheme';
+
+const profile = new Profile()
+// const gigStore = new GigStore()
+const profileList = new ProfileStore()
+const gigList = new gigStore()
+const theme= new DarkTheme()
+const stores = { profileList, profile, gigList, theme }
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider {...stores} >
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 

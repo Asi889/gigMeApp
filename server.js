@@ -6,7 +6,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 const cors = require('cors');
-const api = require('./routes/api');
+const api = require('./backend/routes/api');
 require('dotenv').config();
 
 
@@ -39,8 +39,11 @@ app.use('/api', api)
 //     res.render()
 // })
 
-const port = 3001
-const local= '3.141.166.157';
+const port = process.env.PORT || 3009;
+
+if(process.env.NODE_ENV === 'production'){
+app.use(express.static('client/build'))
+}
 
 app.listen((port), () => {
     console.log(`running on port ${port}`);

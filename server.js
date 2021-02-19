@@ -30,7 +30,7 @@ app.use(cors());
 //     res.sendFile(__dirname + '/index.html');
 // });
 // console.log(__dirname);
-///hello
+///hellooooooo
 
 
 app.use('/api', api)
@@ -48,6 +48,7 @@ app.use(express.static('gigme/build'))
 app.listen((port), () => {
     console.log(`running on port ${port}`);
 });
+const hell= "hell"
 // const server = app.listen(port, () => {
 //     console.log(`running on port ${port}`);
 // });

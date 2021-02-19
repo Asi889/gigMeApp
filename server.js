@@ -29,14 +29,14 @@ app.use(cors());
 // app.get('/hell', (req, res) => {
 //     res.sendFile(__dirname + '/index.html');
 // });
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'build')));
 
 // app.get('/*', (req, res) => {
 //     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 //   });
 
 console.log(__dirname);
-///hellooooooo
+///helloooooooh
 
 
 app.use('/api', api)

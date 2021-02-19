@@ -42,7 +42,7 @@ app.use('/api', api)
 const port = process.env.PORT || 3009;
 
 if(process.env.NODE_ENV === 'production'){
-app.use(express.static('client/build'))
+app.use(express.static('gigme/build'))
 }
 
 app.listen((port), () => {

@@ -29,7 +29,7 @@ app.use(cors());
 // app.get('/hell', (req, res) => {
 //     res.sendFile(__dirname + '/index.html');
 // });
-// console.log(__dirname);
+console.log(__dirname);
 ///hellooooooo
 
 

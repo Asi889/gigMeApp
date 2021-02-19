@@ -29,6 +29,12 @@ app.use(cors());
 // app.get('/hell', (req, res) => {
 //     res.sendFile(__dirname + '/index.html');
 // });
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  });
+
 console.log(__dirname);
 ///hellooooooo
 
@@ -41,9 +47,9 @@ app.use('/api', api)
 
 const port = process.env.PORT || 3009;
 
-if(process.env.NODE_ENV === 'production'){
-app.use(express.static('gigme/build'))
-}
+// if(process.env.NODE_ENV === 'production'){
+// app.use(express.static('gigme/build'))
+// }
 
 app.listen((port), () => {
     console.log(`running on port ${port}`);
